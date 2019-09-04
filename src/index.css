@@ -13,46 +13,66 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.calculator{
-
-   
-
+.calc_input, .calc_result{
+    display:flex;
 }
 
-.calc_input{
-   flex:1;
-   background-color:pink;
-}
     .calc_input > input {
         width: 100%;
-        height: 20vh;
+        height: 18vh;
         border: 0;
         background-color: grey;
-        font-size: 1.2em;
+        font-size: 1.5em;
+        color: white;
+        padding-bottom: 0;
+        padding-right: 5px;
+        text-align: right;
     }
-.calc_result {
-    flex: 1;
+.calc_result > input {
+    width: 100%;
+    height: 18vh;
+    border: 0;
+    font-size: 1.5em;
+    color:white;
     background-color: blueviolet;
+    text-align:right;
+    padding-right:5px;
 }
 
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     width: 100%;
-  height:20vh;
+    height:16vh;
 }
 
 
 .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
     color: white;
     background-color: pink;
     font-size: 1.5em;
     border: 1px solid white;
+    cursor: pointer;
+    align-content:center;
+    justify-content: center;
 }
 
 
@@ -60,22 +80,31 @@ code {
 @media (min-width: 720px){
     .calculator {
         width: 320px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         position:absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
     }
-    .calc_input > input {
-       height:60px;
-      
+    .calc_input > input, .calc_result > input {
+        height: 60px;
     }
+    
     .row {
         height: 70px;
-       
-    }
-   .column{
+          }
 
-   }
+    .column:hover {
+        background-color: white;
+        color: pink;
+        border: 2px solid pink;
+    }
 }
