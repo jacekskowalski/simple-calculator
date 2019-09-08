@@ -105,6 +105,5 @@ code {
     .column:hover {
         background-color: white;
         color: pink;
-        border: 2px solid pink;
     }
 }

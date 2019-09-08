@@ -11,8 +11,7 @@ function mathOperationDetection(typeOfOperation) {
         return "Operation forbidden";
     let signs = [];
     for (let j = 0; j < newarr.length; j++) {
-        console.log("znak "+newarr[j]);
-        if (newarr[j] === "+" || newarr[j] === "-" || newarr[j] === "*" || newarr[j] === "/") {
+         if (newarr[j] === "+" || newarr[j] === "-" || newarr[j] === "*" || newarr[j] === "/") {
             signs.push(newarr[j]);
 
         }
@@ -22,13 +21,13 @@ function mathOperationDetection(typeOfOperation) {
     for (let i = 0; i < newarr.length; i++) {
        
         if (signs[i] === "+") {
-           total += parseFloat(numbers[i+1]);
+            total = add(total, parseFloat(numbers[i + 1]));
         } else if (signs[i] === "-") {
-            total -= parseFloat(numbers[i + 1]);
+            total = subtract(total, parseFloat(numbers[i + 1]));
         } else if (signs[i] === "*") {
-            total *= parseFloat((numbers[i + 1]));
+            total = multiplicate(total, parseFloat(numbers[i + 1]));
         } else if (signs[i] === "/") {
-       total /= parseFloat((numbers[i + 1]));
+            total = divide(total, parseFloat(numbers[i + 1]));
         }
            }
    
