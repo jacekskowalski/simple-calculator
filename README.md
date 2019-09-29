@@ -6,6 +6,7 @@ division
 subtraction
 multiplication
 
+First clone repo and then type npm install to install node modules
 
 ## Available Scripts
 
